@@ -281,7 +281,7 @@ location / {
 }
   ```
   
- #Task5:
+ ###Task5:
  Based on the previous task, you need to create two more servers, in nginx and make the transition to / redblue and what would:
 1.after the first transition to this path there will be a red page
 2. after the second transition to this address, you need to get a blue page.
@@ -508,7 +508,7 @@ listen [::]:83;
   }
 }
 ```
-#File thef1nansist/index.html
+## 16. File thef1nansist/index.html
 ```
 <!doctype html>
 <html>
