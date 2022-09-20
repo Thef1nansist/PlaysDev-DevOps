@@ -391,11 +391,11 @@ server {
 
  location /static/ {
   alias /var/www/html/static_files/;
-  add_header Content-disposition "attachment";
+  add_header Content-disposition "attachment"; #specify the download title
  }
 
  location ~ \.(jpg|gif)$ {
-  image_filter rotate 180;
+  image_filter rotate 180; #rotate image 
   root /var/www/html/static_files/;
 }
 
@@ -405,10 +405,10 @@ server {
 
  location /info/info.php {
   proxy_pass http://54.198.251.77:8080/info.php;
-  proxy_set_header Host $host;
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header Host $host;  #host
+  proxy_set_header X-Real-IP $remote_addr; #remote addr
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #forwarded all headers
+  proxy_set_header X-Forwarded-Proto $scheme; #Without, a site with this configuration will often not work over https.
 }
 
  location /second/index.html {
@@ -420,8 +420,8 @@ server {
  }
 
  location /redblue {
-  access_log /var/log/nginx/thef1nansist.ddns.net-access.log;
-  error_log /var/log/nginx/thef1nansist.ddns.net-error.log;
+  access_log /var/log/nginx/thef1nansist.ddns.net-access.log; #access log
+  error_log /var/log/nginx/thef1nansist.ddns.net-error.log; #error log
   
   proxy_pass http://bluered_backend;
 }
@@ -455,7 +455,7 @@ server {
   server_name thef1nansist.ddns.net www.thef1nansist.ddns.net;
 
  location / {
-  return 301 https://thef1nansist.ddns.net;
+  return 301 https://thef1nansist.ddns.net; #redirect to https
  }
 
 }
