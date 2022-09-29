@@ -12,6 +12,7 @@ You need to create an Application Load Balancer that distributes traffic dependi
 If we enter nginx.example.com into the address bar of the browser, then we get to our instance with a custom web page.
 If we enter apache.example.com into the address bar of the browser, then we get to our instance with a custom web page.
 If we enter google.example.com into the address bar of the browser, we get to the Google search start page <br>
+![image](https://user-images.githubusercontent.com/54819434/193078740-7d84742a-2d66-4dcb-b979-139915d72386.png)
 
  ## Objective of the project: <br>
  The purpose of the work is to acquire practical skills in working with Application Load Balancer and Domains.  <br>
