@@ -12,7 +12,6 @@ You need to create an Application Load Balancer that distributes traffic dependi
 If we enter nginx.example.com into the address bar of the browser, then we get to our instance with a custom web page.
 If we enter apache.example.com into the address bar of the browser, then we get to our instance with a custom web page.
 If we enter google.example.com into the address bar of the browser, we get to the Google search start page <br>
-![image](https://user-images.githubusercontent.com/54819434/193078740-7d84742a-2d66-4dcb-b979-139915d72386.png)
 
  ## Objective of the project: <br>
  The purpose of the work is to acquire practical skills in working with Application Load Balancer and Domains.  <br>
@@ -54,3 +53,19 @@ sudo systemctl start nginx
 3.Register target instance;
 4.Create 3 CNAME DNS (noip);
 5.Click "Listeners" in Load Balanser and "view/edit rules" and add rules for Load Balanser.
+
+![image](https://user-images.githubusercontent.com/54819434/193078873-1e368cb9-73ef-4113-9a2e-f22e8fc0cbd7.png)
+![image](https://user-images.githubusercontent.com/54819434/193078915-642a6004-611a-4b75-a834-2041f10ef13d.png)
+![image](https://user-images.githubusercontent.com/54819434/193078956-8f7e78cd-b2ae-4852-9dd3-29bdd83a1baf.png)
+![image](https://user-images.githubusercontent.com/54819434/193079026-0562cf22-3ee6-4cb8-a272-a6659634c635.png)
+![image](https://user-images.githubusercontent.com/54819434/193079048-baa2b567-490f-4401-92e2-556194c1185f.png)
+![image](https://user-images.githubusercontent.com/54819434/193079075-1a26af64-b3d7-457c-a8ca-0c4cee7d8d78.png)
+![image](https://user-images.githubusercontent.com/54819434/193079117-33083942-216a-498a-971f-5a298573a841.png)
+
+
+
+
+
+
+
+
