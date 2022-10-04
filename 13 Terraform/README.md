@@ -43,3 +43,5 @@ module "ec2" {
   private_subnet_id = module.vpc.private_subnet_ids[0]
 }
  ```
+ ## 2. Diagram
+ ![image](https://user-images.githubusercontent.com/54819434/193834450-a87c8099-484b-44e9-868f-16b4fdc7d702.png)
