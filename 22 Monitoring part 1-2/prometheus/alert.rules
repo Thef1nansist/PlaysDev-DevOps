@@ -1,0 +1,22 @@
+ groups:
+ - name: cpu
+   rules:
+   - alert: HostHighCpuLoad
+     expr: 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle", job="node"}[10s])) * 100) > 20
+     for: 0m
+     labels:
+        severity: warning
+     annotations:
+       summary: Host high CPU load (instance {{ $labels.instance }})
+       description: "CPU load is > 20%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+ - name: ram
+   rules:
+   - alert: RabbitmqMemoryHigh
+     expr: node_memory_MemAvailable_bytes{job="remoute_node"} > 605798400
+     for: 0m
+     labels:
+       severity: warning
+     annotations:
+       summary: Rabbitmq memory high (instance {{ $labels.instance }})
+       description: "A node use more than 15% of allocated RAM\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 1m
+  slack_api_url: 'https://hooks.slack.com/services/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'
+
+route:
+  #  routes:
+      # receiver: 'alertmanager-bot'
+       receiver: 'slack-notifications'
+
+receivers:
+- name: 'alertmanager-bot'
+  webhook_configs:
+  - send_resolved: true
+    url: 'http://alertmanager-bot:8080'
+
+- name: 'slack-notifications'
+  slack_configs:
+  - channel: '#test'
+    send_resolved: true
