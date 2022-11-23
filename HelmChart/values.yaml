@@ -1,0 +1,11 @@
+app: nginx
+image: thef1nansist/app:42
+nodeport: 32007
+application_port: 80
+resources:
+  limits:
+    memory: "128Mi"
+    cpu: "100m"
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
