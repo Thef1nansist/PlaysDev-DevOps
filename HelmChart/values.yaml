@@ -1,5 +1,5 @@
 app: nginx
-image: thef1nansist/app:42
+image: thef1nansist/app:latest
 nodeport: 32007
 application_port: 80
 resources:
